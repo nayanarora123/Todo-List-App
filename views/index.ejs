@@ -1,0 +1,33 @@
+<%- include('header'); -%>
+
+<body>
+    <div class="box" id="heading">
+        <h1><%= title.charAt(0).toUpperCase() + title.slice(1) %></h1>
+    </div>
+
+    <div class="box background">
+        
+        <% items.forEach((e) => { %>
+    <form action="/delete" method="post">
+        <div class="item">
+            <input type="checkbox" name="checkbox" value="<%= e._id %>" onchange="this.form.submit()">
+            <input type="hidden" name="title" value="<%= title %>">
+            <p> <%= e.name %> </p>
+        </div>
+    </form>
+        <% }) %>
+
+        <form action="/" method="post" class="form-control">
+            <input data-input type="text" name="list" placeholder="New Item" required autofocus>
+            <button type="submit" name="submit" value="<%= title %>">+</button>
+        </form>        
+    </div>
+
+    <div class="box background">
+        <form class="form-control" action="/other" method="post">
+            <input data-input type="text" name="list" placeholder="Enter name of NEW/OLD list" required autofocus>
+            <button type="submit" name="submit">+</button>
+    </form>
+    </div>
+    
+<%- include('footer'); -%>

@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: -webkit-linear-gradient(50deg, #101820FF 50%, #FEE715FF 50%);
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.box{
+    margin: 50px auto;
+    max-width: 420px;
+    color: white;
+    padding: 0;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -4px black;
+}
+
+#heading{
+    text-align: center;
+    background-color: #000;
+}
+
+.background{
+    background-color: white;
+}
+
+.item{
+    display: flex;
+    /* when content is smaller height is going to apply and when content is bigger then height will removed */
+    min-height: 70px;  
+    align-items: center;
+    border-bottom: 1px solid rgb(197, 197, 197);
+    color: rgb(85, 85, 85);
+}
+
+.item:last-child{
+    border-bottom: 0;
+}
+
+p{
+    margin-left: 35px;
+    font-size: 1.2rem;
+    color: rgb(40, 40, 40);
+    font-weight: 600;
+}
+
+input[type='checkbox']{
+    margin-left: 20px;
+}
+
+input[type="text"]{
+    width: 365px;
+    height: 70px;
+    font-size: 1.4rem;
+    border: none;
+    text-align: center;
+}
+
+input[type="text"]:focus{
+    outline: none;
+    box-shadow: inset 0 -3px 0 #000000;
+}
+
+.form-control{
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+::placeholder{
+    color: grey;
+    opacity: 1;
+}
+
+/* when input in checked state then target that next p to input */
+input:checked+p{
+    text-decoration: line-through;
+    text-decoration-color: #a683e3;
+}
+
+button{
+    font-size: 30px;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: #000;
+    border-radius: 100%;
+}
+
+footer{
+    color: white;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.about{
+    text-align: center;
+}
